@@ -1,5 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&family=Sofia+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 body {
   background-color: #fcfcfc;
+  font-family: Sofia Sans, Helvetica, sans-serif;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: "Mulish", Arial, sans-serif;
+  margin: 0;
 }
 
 #content {
@@ -16,6 +27,16 @@ main section {
   text-align: center;
 }
 
+main section img {
+  box-sizing: border-box;
+}
+
+.home-title {
+  font-family: "Mulish", Arial, sans-serif;
+  font-size: 2em;
+  margin-top: 10px;
+}
+
 .button-box {
   text-align: center;
 }
@@ -30,9 +51,10 @@ header {
   color: #1d515c;
 }
 nav a {
-  text-align: center;
-  color: #1d515c;
   text-decoration: none;
+  color: #1d515c;
+  text-align: center;
+  padding: 35px;
 }
 nav a:hover {
   background-color: #5b8f8d;
@@ -43,6 +65,10 @@ nav a:hover {
   background-color: #eebf87;
   color: #1d515c;
   text-decoration: none;
+  font-size: 18px;
+  padding: 15px 30px;
+  margin-top: 50px;
+  border-radius: 5px;
 }
 .book:hover,
 .join:hover {
@@ -52,10 +78,18 @@ nav a:hover {
 .msg {
   background-color: #eebf87;
   color: #1d515c;
+  line-height: 1.5em;
+  padding: 35px;
+}
+.msg p {
+  font-size: 0.8em;
+  padding-bottom: 15px;
 }
 footer {
   background-color: #eebf87;
   color: #1d515c;
+  padding: 25px 50px;
+  margin-top: 200px;
 }
 
 footer p {
@@ -73,10 +107,29 @@ footer p a:hover {
   text-decoration: underline;
 }
 
+footer .social img {
+  padding-top: 15px;
+}
+
 .logo,
 .icon {
   width: 80px;
 }
+.icon {
+  padding-top: 10px;
+}
 #hero-img {
   width: 100%;
+}
+
+#logo_link {
+  padding-top: 5px;
+}
+.rivers-card,
+.camping-card,
+.rapids-card {
+  margin: 200px 0;
+}
+.card-img {
+  border: 10px solid #eebf87;
 }
