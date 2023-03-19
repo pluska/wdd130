@@ -1,0 +1,119 @@
+@import url("https://use.typekit.net/kbj1mgh.css");
+
+
+body {
+  font-family: "muli", sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: #a10036;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 200px auto;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+  color:#fff;
+}
+
+nav a {
+  padding: 30px;
+  font-size: 24px;
+}
+
+
+nav a:hover {
+  background-color: #256d85;
+}
+
+#logo_link {
+  padding-top: 5px;
+  align-self: center;
+  justify-self: center;
+}
+
+.logo {
+  width: 80px;
+}
+
+#hero {
+  background-color: rgba(0, 0, 0, .3);
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows:  45% 55%;
+  margin-top: -100px;
+}
+
+#hero-box {
+  grid-column: 1/4;
+  grid-row: 1/3;
+  z-index: -1;
+}
+
+#hero-box img {
+  width: 100%;
+}
+
+#hero h1 {
+  color: #fff;
+  font-size: 40px;
+  align-self: center;
+  justify-self: center;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-top: 100px;
+}
+
+main {
+  margin: 20px;
+}
+
+.subtitle {
+  font-size: 30px;
+  color: #002b5b;
+}
+
+#experience-container {
+  display: grid;
+  grid-template-columns: 55% 45%;
+}
+
+section p {
+  font-size: 20px;
+}
+
+.experience-img {
+  align-self: center;
+  justify-self: center;
+}
+
+.experience-img img {
+  width: 400px;
+}
+
+footer {
+  background-color: #a10036;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.social a img {
+  padding: 5px;
+  width: 50px;
+}
+
+footer p {
+  font-size: 24px;
+}
