@@ -5,11 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andres Pluska | Contact Me</title>
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
   <header>
-    <a href="index.html">
-      <img src="./andres-pluska-logo.png" alt="Andres Pluska Logo">
+    <a href="index.html" id="logo_link">
+      <img src="./andres-pluska-logo.png" alt="Andres Pluska Logo" class="logo">
     </a>
     <nav>
       <a href="index.html">Home</a>
@@ -23,26 +24,36 @@
     </div>
     <h1>Contact Me</h1>
   </div>
-  <main>
-    <div>
+  <main class="main-contact">
+    <div id="social-network-container">
       <p>Need help solving a problem? Fill out the contact form and I'll help you find a solution. Or maybe you want to team up with me on a project, I'd love to know what idea you have. Also don't shy away from sending me a work proposal, maybe we'll coworkers - whatever your message is, I look forward to hearing from you!</p>
-      <h4>Social Networks</h4>
-      <a href="https://twitter.com/andresplusk" target="_blank">
-        <img src="./twitter.png" alt="Twitter">
+      <div id="social-network">
+        <h4>Social Networks</h4>
+        <a href="https://twitter.com/andresplusk" target="_blank">
+        <img src="./twitter.png" alt="Twitter" class="social-icon">
         <span>Twitter</span>
-      </a>
-      <a href="https://www.linkedin.com/in/andrespluska/" target="_blank">
-        <img src="./LinkedIn_icon.png" alt="LinkedIn">
-        <span>LinkedIn</span>
-      </a>
-      <a href="https://github.com/pluska?tab=repositories" target="_blank">
-        <img src="./github.png" alt="GitHub">
-        <span>GitHub</span>
-      </a>
+        </a>
+        <a href="https://www.linkedin.com/in/andrespluska/" target="_blank">
+          <img src="./LinkedIn_icon.png" alt="LinkedIn" class="social-icon">
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/pluska?tab=repositories" target="_blank">
+          <img src="./github.png" alt="GitHub" class="social-icon">
+          <span>GitHub</span>
+        </a>
+      </div>
     </div>
     <div id="form">
       <img src="./email-contact.svg" alt="Message being sent">
-      <form action="#">
+      <form action="#" id="contact-form">
+        <div class="alert" id="alert">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          Your message has been send! 😄
+        </div>
+        <div class="alert warning" id="feedback">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          You need to complete the required fields.
+        </div>
         <input type="text" name="fullname" placeholder="Fullname" required>
         <input type="email" name="email" placeholder="Email" required>
         <input type="text" name="company" placeholder="Company">
@@ -52,9 +63,9 @@
           <option value="Project partner">You want to start a project together with me</option>
           <option value="Tutor">You need a tutor</option>
         </select>
-        <textarea name="message" cols="30" rows="10" placeholder="type your message here."></textarea>
-        <div>
-          <button>Send</button>
+        <textarea name="message" cols="30" rows="10" placeholder="Type your message here." required></textarea>
+        <div class="btn-submit">
+          <button onclick="submitBtn()" type="submit" form="contact-form">Send</button>
         </div>
       </form>
     </div>
@@ -69,5 +80,35 @@
       <a href="https://github.com/pluska?tab=repositories" target="_blank"><img src="./github.png" alt="GitHub"></a>
     </div>
   </footer>
+  <script>
+    function submitBtn() {
+      let formValid = false
+      const alertSuccess = document.getElementById("alert")
+      const alertFeedback = document.getElementById("feedback")
+      const inputValidation = [...document.getElementsByTagName('input')]
+      inputValidation.forEach(input => {
+        if (input.validity.valid) {
+          formValid = true
+        } else {
+          formValid = false
+        }
+      });
+      const textareaValidation = document.getElementsByTagName('textarea')[0]
+      console.log(textareaValidation.validity)
+      if (textareaValidation.validity.valid) {
+        formValid = true
+      } else {
+        formValid = false
+      }
+      if (formValid) {
+        window.event.preventDefault();
+        alertFeedback.style.display = "none"
+        alertSuccess.style.display = "block";
+      } else {
+        alertFeedback.style.display = "block";
+        alertSuccess.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>

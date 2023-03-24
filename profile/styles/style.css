@@ -59,7 +59,9 @@ nav a:hover {
 }
 
 #hero-box img {
+  padding-top: 50px;
   width: 100%;
+  height: 600px;
 }
 
 #hero h1 {
@@ -116,4 +118,159 @@ footer {
 
 footer p {
   font-size: 24px;
+}
+
+/* Contact Me Styles */
+
+.main-contact {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+
+#social-network-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+
+#social-network-container p {
+  grid-row: 1/2;
+  font-size: 20px;
+}
+
+#social-network {
+  margin: 0px 0px 0px 30px;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+}
+
+#social-network h4 {
+  font-size: 24px;
+}
+
+#social-network a {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+#social-network a span {
+  color: #002b5b;
+  padding-left: 15px;
+}
+
+.social-icon {
+  width: 30px;
+}
+
+#form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+#form img {
+  grid-column: 1/3;
+  justify-self: center;
+  width: 500px;
+}
+
+form {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+input,
+textarea,
+select {
+  padding: 7px;
+  margin: 10px;
+  font: 1.3em sans-serif;
+  box-sizing: border-box;
+  color: #999;
+  border: 1px solid #999;
+  border-radius: 6px;
+}
+
+input,
+select {
+  width: 300px;
+}
+
+select option {
+  color: #999;
+  font: 1em sans-serif;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  /* Additional highlight for focused elements */
+  border-color: #000;
+}
+
+textarea {
+  width: 620px;
+  vertical-align: top;
+  height: 5em;
+}
+
+.btn-submit {
+  text-align: center;
+}
+
+.btn-submit button {
+  padding-left: 90px;
+  background-color: #002b5b;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 15px 30px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.btn-submit button:hover {
+  background-color: #256d85;
+  color: #fff;
+}
+
+/* The alert message box */
+.alert {
+  display: none;
+  opacity: 1;
+  transition: opacity 0.6s;
+  padding: 20px;
+  background-color: #256d85;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.warning {
+  background-color: #eed202;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
 }
