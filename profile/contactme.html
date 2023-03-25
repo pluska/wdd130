@@ -18,29 +18,24 @@
       <a href="contactme.html">Contact</a>
     </nav>
   </header>
-  <div id="hero">
-    <div id="hero-box">
-      <img src="./contact-me.svg" alt="Two people talking through a form">
-    </div>
-    <h1>Contact Me</h1>
-  </div>
+  <h1 class="contact-title">Contact Me</h1>
   <main class="main-contact">
     <div id="social-network-container">
       <p>Need help solving a problem? Fill out the contact form and I'll help you find a solution. Or maybe you want to team up with me on a project, I'd love to know what idea you have. Also don't shy away from sending me a work proposal, maybe we'll coworkers - whatever your message is, I look forward to hearing from you!</p>
       <div id="social-network">
         <h4>Social Networks</h4>
-        <a href="https://twitter.com/andresplusk" target="_blank">
-        <img src="./twitter.png" alt="Twitter" class="social-icon">
-        <span>Twitter</span>
-        </a>
-        <a href="https://www.linkedin.com/in/andrespluska/" target="_blank">
-          <img src="./LinkedIn_icon.png" alt="LinkedIn" class="social-icon">
-          <span>LinkedIn</span>
-        </a>
-        <a href="https://github.com/pluska?tab=repositories" target="_blank">
-          <img src="./github.png" alt="GitHub" class="social-icon">
-          <span>GitHub</span>
-        </a>
+        <div id="RRSS-container">
+          <img src="./contact-me.svg" alt="Two people talking" width="200px">
+          <a href="https://twitter.com/andresplusk" target="_blank">
+            <span>Twitter</span>
+          </a>
+          <a href="https://www.linkedin.com/in/andrespluska/" target="_blank">
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/pluska?tab=repositories" target="_blank">
+            <span>GitHub</span>
+          </a>
+        </div>
       </div>
     </div>
     <div id="form">
@@ -58,6 +53,7 @@
         <input type="email" name="email" placeholder="Email" required>
         <input type="text" name="company" placeholder="Company">
         <select name="reason" required>
+          <option value="">--- Please Select One Option ---</option>
           <option value="Employee">To hire me for your company</option>
           <option value="freelance">So I can fix a problem with your website</option>
           <option value="Project partner">You want to start a project together with me</option>
