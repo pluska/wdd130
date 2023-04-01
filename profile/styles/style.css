@@ -130,10 +130,11 @@ footer p {
   align-items: center;
 }
 
-.contact-title {
+.main-title {
+  font-size: 38px;
   color:#002b5b;
   text-align: center;
-  margin: 20px;
+  margin: 30px;
 }
 
 #social-network-container {
@@ -292,4 +293,53 @@ textarea {
 /* When moving the mouse over the close button */
 .closebtn:hover {
   color: black;
+}
+
+/* About me style */
+
+.content-1 {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+
+}
+.about-me-img {
+  max-width: 400px;
+}
+
+#about-me-img-1 {
+  grid-column: 1;
+  grid-row: span 2;
+  justify-self: center;
+}
+
+.content-1 h2 {
+  grid-column: 2/3;
+  grid-row: 1;
+}
+.content-1 div {
+  grid-column: 2/3;
+  grid-row: 2;
+}
+
+.content-1 p {
+  font-size: 18px;
+}
+
+.content-2 {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+}
+
+.content-2 p {
+  font-size: 18px;
+}
+
+#about-me-img-2 {
+  grid-column: 2;
+  grid-row: span 2;
+  justify-self: center;
 }
