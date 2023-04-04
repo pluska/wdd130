@@ -9,7 +9,7 @@ body {
 
 .main-content {
   max-width: 1600px;
-  margin: 0;
+  margin: 0 auto;
 }
 
 header {
